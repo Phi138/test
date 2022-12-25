@@ -1,0 +1,5 @@
+#!/bin/bash
+var=123
+var
+=$var+4
+echo "var = $var"

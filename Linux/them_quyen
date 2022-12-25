@@ -1,0 +1,21 @@
+#!/bin/bash
+clear
+file=$1
+if [ -e $file ]; then
+	echo "File ton tai"
+	ls -l | grep $file
+	echo "Ban can them quyen nao: r/w/x"
+	read value
+	if [ $value = r ]; then
+		chmod u+r $file
+	elif [ $value = w ]; then
+		chmod u+w $file
+	elif [ $value = x ]; then
+		chmod u+x $file
+	fi
+	echo "da cap quyen"
+else
+	echo "File ko ton tai"
+fi
+ls -l | grep $file
+
